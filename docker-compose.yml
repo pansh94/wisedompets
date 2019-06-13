@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+    db:
+        image: postgres
+    web:
+        build: .
+        command: python manage.py runserver 0.0.0.0:5005
+        volumes:
+            - .:/django_code
+        ports:
+            - "5005:5005"
+        depends_on:
+            - db
+
+
