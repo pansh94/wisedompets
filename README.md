@@ -1,5 +1,5 @@
 # WisdomPets
-Its an basic web application with docker, database and template to explain the working of Django project with docker.
+Its a basic web application with docker, database and template to explain the working of Django project with docker.
 We used:
 1. Docker
 2. Template
