@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <h3>{{ pet_info.name }}</h3>
+    <p>Species : {{ pet_info.species }}</p>
+    {% if pet_info.breed %}
+        <p>Breed : {{ pet_info.breed }}</p>
+    {% endif %}
+    {% if pet_info.sex %}
+        <p>sex : {{ pet_info.sex }}</p>
+    {% endif %}
+    {% if pet_info.age %}
+        <p>Age : {{ pet_info.age }}</p>
+    {% endif %}
+    {% if vaccine %}
+    <p>Vaccine:</p>
+    {% for reason in vaccine.all %}
+    <ul>
+        <li>{{ reason.vaccine.name }}: {{ reason.reason_for }}</li>
+    </ul>
+    {% endfor %}
+    {% endif %}
+    <p class="hidden">Description : {{ pet_info.description }}</p>
+    <p>Submitted By: {{ pet_info.submitter }}</p>
+    <p>Submitter On: {{ pet_info.submission_date }}</p>
+</div>
+{% endblock %}

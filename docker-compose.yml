@@ -6,6 +6,7 @@ services:
     web:
         build: .
         command: python manage.py runserver 0.0.0.0:5005
+        restart: always
         volumes:
             - .:/django_code
         ports:
